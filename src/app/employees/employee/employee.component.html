@@ -1,0 +1,85 @@
+<div class='container-fluid'>
+  <form #employeeForm='ngForm' class='emp-form container' (ngSubmit)='onSubmit(employeeForm)'>
+      <div class='form-group col-md-10'>
+        <label>{{firstName}}</label>
+        <input required class='form-control' type='text' name='FirstName' #FirstName='ngModel' 
+        [(ngModel)] = 'employeeService.selectedEmployee.FirstName' >
+      </div>
+    <div class='form-group col-md-10'>
+      <label>{{lastName}}</label>
+          <input class='form-control' type='text' name='LastName' #LastName='ngModel'
+          [(ngModel)] = 'employeeService.selectedEmployee.LastName' required >
+    </div>
+  
+    <div class='form-group col-md-10'>
+      <label>{{businessTitle}}</label>
+        <input class='form-control' name='BusinessTitle' #BusinessTitle='ngModel'
+        [(ngModel)] = 'employeeService.selectedEmployee.BusinessTitle' required >
+      </div>
+    
+    <div class='form-group col-md-10'>
+      <label>{{organization}}</label>
+        <input class='form-control' name='Organization' #Organization='ngModel'         [(ngModel)] = 'employeeService.selectedEmployee.Organization' required >        
+    </div>
+  
+    <div class='form-group col-md-10'>
+      <label>{{email}}</label>
+          <input class='form-control' type='email' name='Email' #Email='ngModel' 
+        [(ngModel)] = 'employeeService.selectedEmployee.Email' required >
+    </div>
+  
+    <div class='form-group col-md-10'>
+      <label>{{address}}</label>
+      <input class='form-control' name='Address' #Address='ngModel' 
+      [(ngModel)] = 'employeeService.selectedEmployee.Address' required >
+    </div>
+  
+    <div class='form-group col-md-10'>
+      <label>{{city}}</label>
+        <input class='form-control' type='text' name='City' #City='ngModel'
+        [(ngModel)] = 'employeeService.selectedEmployee.City' required >
+        
+    </div>
+  
+    <div class='form-group col-md-10'>
+      <label>{{state}}</label>
+        <input class='form-control' type='text' name='State' #State='ngModel' 
+        [(ngModel)] ='employeeService.selectedEmployee.State' required >
+        
+    </div>
+  
+    <div class='form-group col-md-10'>
+      <label>{{zip}}</label>
+        <input class='form-control' type='number' name='Zip' #Zip='ngModel'
+        [(ngModel)] = 'employeeService.selectedEmployee.Zip' required >
+        
+    </div>
+  
+    <div class='form-group col-md-10'>
+      <label>{{age}}</label>
+        <input class='form-control' type='number' name='Age' #Age='ngModel' 
+        [(ngModel)] = 'employeeService.selectedEmployee.Age' required >
+    </div>
+  
+    <div class='form-group col-md-10'>
+      <label>{{interests}}</label>
+        <input class='form-control' type='text' name='Interests' #Interests='ngModel'
+        [(ngModel)] = 'employeeService.selectedEmployee.Interests' required >
+    </div>
+  
+    <div class='form-row submit-button'>
+        <div class='form-group col-md-6'>
+          <button type='submit' class='btn btn-lg btn-block btn-info'>
+            <i class='fa fa-floppy-o'></i>{{submit}}
+          </button>
+        </div>
+      
+        <div class='form-group col-md-4'>
+            <button type='button' (click)='resetForm(employeeForm)' class='btn btn-lg btn-block btn-secondary'>
+                <i class='fa fa-refresh'></i>{{refresh}}
+              </button> 
+        </div>
+      </div> 
+  </form>
+  </div>
+  

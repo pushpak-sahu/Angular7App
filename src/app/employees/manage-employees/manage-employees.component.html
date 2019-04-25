@@ -1,0 +1,23 @@
+<div class="container-fluid">
+    <table class="table table-striped">
+        <thead>
+            <tr>
+              <th scope="col">Employee ID</th>
+              <th scope="col">First Name</th>
+              <th scope="col">Last Name</th>
+            </tr>
+          </thead>
+      <tbody>
+        <tr *ngFor='let employee of employees'>
+          <td>{{employee.Id}}</td>
+          <td>{{employee.FirstName}}</td> 
+          <td>{{employee.LastName}}</td>
+          <td>
+            <a class='btn text' (click)='onDelete(employee.Id)'>
+              <i class='fa fa-trash-o'></i>
+            </a>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+    </div>

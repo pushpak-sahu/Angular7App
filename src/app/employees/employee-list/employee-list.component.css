@@ -1,0 +1,15 @@
+.table thead th {
+    vertical-align: middle;
+    color: grey;
+    font-family: initial;
+}
+
+.example-full-width {
+    margin: 3rem;
+}
+
+.form-control {
+    width: 50%;
+    float: right;
+    margin: 1rem 0;
+}

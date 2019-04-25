@@ -1,0 +1,19 @@
+.container-fluid {
+    padding: 3rem;
+    height: -webkit-fill-available;
+}
+
+.emp-form {
+    background-color: #f0f0f0;
+    border-radius: 4px;
+    padding: 10px;
+}
+
+.fa {
+    width: 25px;
+  }
+
+.submit-button {
+    padding-left: 1rem;
+    margin-top: 2rem;
+}
